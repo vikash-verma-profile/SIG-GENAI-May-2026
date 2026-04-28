@@ -1,0 +1,9 @@
+!pip install -U langchain langchain-community langchain-experimental langchain-groq sqlalchemy pandas ddgs
+
+from langchain_groq import ChatGroq
+llm = ChatGroq(
+    groq_api_key="",
+    model_name="llama-3.1-8b-instant"
+)
+
+llm.invoke("Who is viaksh Verma")
