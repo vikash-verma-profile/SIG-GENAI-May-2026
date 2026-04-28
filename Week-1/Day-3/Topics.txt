@@ -1,0 +1,7 @@
+• Claude Code: CLI agentic coding assistant – setup & workflow
+• GitHub Copilot: inline completion, Copilot Chat
+• Cursor IDE: multi-file context, codebase Q&A
+• CoWork (Anthropic): desktop task automation for DE ops
+• Windsurf IDE & Replit Agent overview
+• Effective prompting inside IDEs for DE code
+• Prompt-driven TDD: tests first, then implementation

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include("../partials/header", { active }) %>
+
+    <main class="container">
+      <section class="page">
+        <h1>Contact Me</h1>
+        <p class="subtitle">
+          Send a message. (This demo just shows a success message—no email sending yet.)
+        </p>
+
+        <% if (sent) { %>
+          <div class="notice success">
+            Thanks<%= name ? `, ${name}` : "" %>! Your message was received.
+          </div>
+        <% } %>
+
+        <form class="form" method="post" action="/contact">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+          </div>
+
+          <div class="cta-row">
+            <button class="btn primary" type="submit">Send</button>
+            <a class="btn" href="/">Back Home</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <%= new Date().getFullYear() %> Vikash</span>
+        <span class="muted">Contact: your-email@example.com</span>
+      </div>
+    </footer>
+  </body>
+</html>
+

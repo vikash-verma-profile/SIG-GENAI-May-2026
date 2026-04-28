@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include("../partials/header", { active }) %>
+
+    <main class="container">
+      <section class="hero">
+        <p class="eyebrow">Welcome</p>
+        <h1>Hi, I’m <span class="grad">Vikash</span>.</h1>
+        <p class="subtitle">
+          This is my personal website for <strong>vikash.in</strong>—a simple place to share who I am and how to reach me.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/about">Read About Me</a>
+          <a class="btn" href="/contact">Contact Me</a>
+        </div>
+      </section>
+
+      <section class="cards">
+        <article class="card">
+          <h2>About Me</h2>
+          <p>A quick overview of what I’m learning and building.</p>
+          <a class="text-link" href="/about">Go to About →</a>
+        </article>
+        <article class="card">
+          <h2>Contact</h2>
+          <p>Send a message using the contact form.</p>
+          <a class="text-link" href="/contact">Go to Contact →</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <%= new Date().getFullYear() %> Vikash</span>
+        <span class="muted">Built with Node.js + Express</span>
+      </div>
+    </footer>
+  </body>
+</html>
+

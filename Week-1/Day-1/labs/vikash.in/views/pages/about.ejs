@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include("../partials/header", { active }) %>
+
+    <main class="container">
+      <section class="page">
+        <h1>About Me</h1>
+        <p class="subtitle">
+          I’m Vikash. I’m building projects and learning modern web development.
+        </p>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h2>What I’m doing</h2>
+            <ul class="list">
+              <li>Learning Node.js and building web apps</li>
+              <li>Practicing HTML/CSS to create clean UIs</li>
+              <li>Exploring GenAI tools and workflows</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h2>What this site is</h2>
+            <p>
+              A small multi-page site with a shared layout (header + navigation), built using
+              Express routes and EJS templates.
+            </p>
+            <p class="muted">
+              You can customize this page with your bio, skills, projects, and social links anytime.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="/contact">Contact Me</a>
+          <a class="btn" href="/">Back Home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <%= new Date().getFullYear() %> Vikash</span>
+        <span class="muted">vikash.in</span>
+      </div>
+    </footer>
+  </body>
+</html>
+

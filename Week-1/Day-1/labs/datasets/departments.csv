@@ -1,0 +1,10 @@
+department_id,department_name,location,budget
+D001,Engineering,Bengaluru,25000000
+D002,Product,Bengaluru,12000000
+D003,Design,Pune,6500000
+D004,Data,Hyderabad,9000000
+D005,HR,Delhi,3000000
+D006,Finance,Mumbai,5000000
+D007,Sales,Gurugram,11000000
+D008,Customer Support,Noida,4500000
+

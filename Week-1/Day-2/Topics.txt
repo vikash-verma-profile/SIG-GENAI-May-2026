@@ -1,0 +1,7 @@
+• Zero-shot, one-shot, few-shot prompting
+• Chain-of-thought & ReAct prompting for complex reasoning
+• Role prompting: 'Act as a senior Data Engineer...'
+• NL→SQL and SQL→NL explanation patterns
+• Structured output: enforcing JSON / YAML responses
+• Context engineering: managing tokens & conversation state
+• Prompt templates & reusable DE prompt library

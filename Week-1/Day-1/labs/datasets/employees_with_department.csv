@@ -1,0 +1,17 @@
+employee_id,first_name,last_name,email,phone,department_id,department_name,title,hire_date,employment_type,city,state,country,base_salary,status
+E0001,Aarav,Sharma,aarav.sharma@vikash.in,+91-98765-10001,D001,Engineering,Software Engineer,2023-07-10,Full-time,Bengaluru,KA,IN,1200000,Active
+E0002,Ananya,Verma,ananya.verma@vikash.in,+91-98765-10002,D002,Product,Product Manager,2022-11-21,Full-time,Bengaluru,KA,IN,1800000,Active
+E0003,Rohan,Mehta,rohan.mehta@vikash.in,+91-98765-10003,D003,Design,UI/UX Designer,2024-02-05,Full-time,Pune,MH,IN,1100000,Active
+E0004,Priya,Iyer,priya.iyer@vikash.in,+91-98765-10004,D004,Data,Data Analyst,2021-05-17,Full-time,Hyderabad,TS,IN,1400000,Active
+E0005,Vikram,Singh,vikram.singh@vikash.in,+91-98765-10005,D007,Sales,Sales Executive,2020-09-01,Full-time,Gurugram,HR,IN,1000000,Active
+E0006,Neha,Kapoor,neha.kapoor@vikash.in,+91-98765-10006,D005,HR,HR Executive,2022-03-14,Full-time,Delhi,DL,IN,800000,Active
+E0007,Arjun,Nair,arjun.nair@vikash.in,+91-98765-10007,D001,Engineering,Backend Engineer,2019-01-28,Full-time,Bengaluru,KA,IN,2000000,Active
+E0008,Isha,Gupta,isha.gupta@vikash.in,+91-98765-10008,D006,Finance,Accountant,2023-01-09,Full-time,Mumbai,MH,IN,900000,Active
+E0009,Kabir,Jain,kabir.jain@vikash.in,+91-98765-10009,D008,Customer Support,Support Associate,2024-06-03,Full-time,Noida,UP,IN,650000,Active
+E0010,Sneha,Patil,sneha.patil@vikash.in,+91-98765-10010,D004,Data,Data Engineer,2021-10-25,Full-time,Hyderabad,TS,IN,2200000,Active
+E0011,Manish,Chopra,manish.chopra@vikash.in,+91-98765-10011,D002,Product,Associate PM,2024-08-12,Contract,Bengaluru,KA,IN,1200000,Active
+E0012,Pooja,Reddy,pooja.reddy@vikash.in,+91-98765-10012,D003,Design,Graphic Designer,2020-04-20,Part-time,Pune,MH,IN,600000,Active
+E0013,Rahul,Bose,rahul.bose@vikash.in,+91-98765-10013,D001,Engineering,DevOps Engineer,2018-12-03,Full-time,Bengaluru,KA,IN,2400000,Active
+E0014,Divya,Mishra,divya.mishra@vikash.in,+91-98765-10014,D007,Sales,Account Executive,2022-07-18,Full-time,Gurugram,HR,IN,1300000,Active
+E0015,Sahil,Khan,sahil.khan@vikash.in,+91-98765-10015,D008,Customer Support,Support Lead,2019-09-30,Full-time,Noida,UP,IN,1100000,Active
+

@@ -1,0 +1,7 @@
+• RAG pattern: retrieve → augment → generate
+• Document chunking strategies (fixed, semantic, hierarchical)
+• Embedding models: OpenAI ada-002, sentence-transformers, BGE
+• Vector DB concepts: HNSW index, cosine similarity, ANN search
+• Naïve RAG vs Hybrid RAG vs Corrective RAG
+• RAG for DE: querying data dictionaries, pipeline docs, catalogues
+• Azure AI Search integration for enterprise RAG
