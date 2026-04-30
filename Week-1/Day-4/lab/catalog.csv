@@ -1,0 +1,21 @@
+table_name,description,columns,last_updated
+table_0,Contains customer PII,"id, name, email",2026-04-25 12:48:43.599402
+table_1,Contains transactions,"id, amount",2026-04-24 12:48:43.599402
+table_2,Contains transactions,"id, amount",2026-04-26 12:48:43.599402
+table_3,Contains customer PII,"id, name, email",2026-04-23 12:48:43.599402
+table_4,Contains transactions,"id, amount",2026-04-26 12:48:43.599402
+table_5,Contains transactions,"id, amount",2026-04-24 12:48:43.599402
+table_6,Contains customer PII,"id, name, email",2026-04-25 12:48:43.599402
+table_7,Contains transactions,"id, amount",2026-04-25 12:48:43.599402
+table_8,Contains transactions,"id, amount",2026-04-24 12:48:43.599402
+table_9,Contains customer PII,"id, name, email",2026-04-28 12:48:43.599402
+table_10,Contains transactions,"id, amount",2026-04-26 12:48:43.599402
+table_11,Contains transactions,"id, amount",2026-04-22 12:48:43.599402
+table_12,Contains customer PII,"id, name, email",2026-04-25 12:48:43.599402
+table_13,Contains transactions,"id, amount",2026-04-29 12:48:43.599402
+table_14,Contains transactions,"id, amount",2026-04-24 12:48:43.599402
+table_15,Contains customer PII,"id, name, email",2026-04-20 12:48:43.599402
+table_16,Contains transactions,"id, amount",2026-04-29 12:48:43.599402
+table_17,Contains transactions,"id, amount",2026-04-24 12:48:43.599402
+table_18,Contains customer PII,"id, name, email",2026-04-26 12:48:43.599402
+table_19,Contains transactions,"id, amount",2026-04-22 12:48:43.599402

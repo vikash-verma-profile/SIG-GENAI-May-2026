@@ -1,0 +1,10 @@
+Document Title: IT Security Policy
+
+All employees must use VPN for remote access.
+
+Passwords must be at least 12 characters long and changed every 60 days.
+
+Sharing credentials is strictly prohibited.
+Multi-factor authentication is mandatory.
+
+Access to sensitive systems is logged and monitored.
