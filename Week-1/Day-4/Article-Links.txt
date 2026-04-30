@@ -1,0 +1,11 @@
+https://medium.com/@tejpal.abhyuday/retrieval-augmented-generation-rag-from-basics-to-advanced-a2b068fd576c
+
+https://medium.com/@swetha.voora01/retrieval-augmented-generation-rag-series-part1-9afbd2577df5
+
+https://medium.com/enterprise-rag/a-first-intro-to-complex-rag-retrieval-augmented-generation-a8624d70090f
+
+https://medium.com/@jiarunhuang/understanding-rag-retrieval-augmented-generation-0d5a47d5e489
+
+https://medium.com/@nikita04/what-is-rag-retrieval-augmented-generation-7875ce0de5b1
+
+https://medium.com/@samarrana407/mastering-rag-advanced-methods-to-enhance-retrieval-augmented-generation-4b611f6ca99a
