@@ -1,0 +1,6 @@
+• Model Context Protocol (MCP): standard for AI tool integration
+• Tool/function calling with LLMs (OpenAI, Claude)
+• MCP servers for Snowflake, PostgreSQL, file systems
+• Integrating external APIs into AI workflows
+• 15-min Week 1 knowledge quiz
+• Group retrospective: top GenAI opportunities in your project

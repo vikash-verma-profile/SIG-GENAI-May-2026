@@ -1,0 +1,16 @@
+patient_id,name,age,gender,diagnosis
+1,John Doe,45,M,Hypertension
+2,Jane Smith,52,F,Diabetes
+3,Ravi Kumar,60,M,Hypertension
+4,Anita Sharma,38,F,Normal
+5,Rahul Verma,55,M,Diabetes
+6,Sunita Devi,48,F,Hypertension
+7,Amit Singh,62,M,Cardiac
+8,Pooja Mehta,35,F,Normal
+9,Arjun Reddy,50,M,Hypertension
+10,Neha Gupta,42,F,Diabetes
+11,Vikram Rao,58,M,Cardiac
+12,Kavita Joshi,47,F,Hypertension
+13,Manoj Tiwari,65,M,Diabetes
+14,Sneha Iyer,33,F,Normal
+15,Rohit Sharma,54,M,Hypertension

@@ -1,0 +1,21 @@
+Hypertension:
+- BP > 140 indicates Stage 1 Hypertension
+- Treatment:
+  • Lifestyle modification
+  • ACE inhibitors or beta blockers
+
+Diabetes:
+- High blood sugar levels
+- Treatment:
+  • Insulin therapy
+  • Metformin
+
+Cardiac:
+- Risk of heart disease
+- Treatment:
+  • Lifestyle changes
+  • Medication and monitoring
+
+Normal:
+- No immediate risk
+- Maintain healthy lifestyle
