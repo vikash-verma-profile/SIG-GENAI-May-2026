@@ -1,0 +1,7 @@
+• NL2SQL deep-dive: patterns, accuracy, edge cases
+• SQL review & optimisation with Claude Code
+• AI-assisted dimensional modelling (star/snowflake schema design)
+• dbt model generation: models, sources, exposures from prompt
+• AI-generated dbt schema tests and documentation
+• Snowflake Cortex Analyst: self-serve NL→SQL in the warehouse
+• SQL code review agent: security, performance, readability
