@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: signup_date
+        tests:
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_order_lines
+    columns:
+      - name: order_line_id
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_customer
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_order_lines
+    columns:
+      - name: order_line_id
+        tests:
+          - not_null
+          - unique
+      - name: line_total
+        tests:
+          - not_null

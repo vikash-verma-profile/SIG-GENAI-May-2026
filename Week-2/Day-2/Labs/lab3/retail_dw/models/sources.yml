@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw_store
+    description: Landing-zone tables ingested from operational DB.
+    tables:
+      - name: customers
+        columns:
+          - name: customer_id
+          - name: name
+          - name: region
+          - name: signup_date
+      - name: orders
+        columns:
+          - name: order_id
+          - name: customer_id
+          - name: order_date
+          - name: status
+      - name: order_lines
+        columns:
+          - name: order_line_id
+          - name: order_id
+          - name: product_id
+          - name: quantity
+          - name: line_total
+      - name: products
+        columns:
+          - name: product_id
+          - name: sku
+          - name: category
+          - name: unit_price
