@@ -1,0 +1,7 @@
+• AI code review: security vulnerabilities, performance anti-patterns
+• Bug diagnosis: providing stack traces to Claude for root-cause analysis
+• Auto-generating docstrings, type hints, and inline comments
+• README and technical design doc generation from code
+• Runbook and incident playbook generation
+• CoWork: meeting notes → action items, email summaries
+• Confluence / Notion page drafting from pipeline metadata

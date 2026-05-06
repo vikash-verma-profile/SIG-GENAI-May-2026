@@ -1,0 +1,527 @@
+[0m13:05:53.712907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289123BF9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289137B43A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289137B41C0>]}
+
+
+============================== 13:05:53.712907 | 627c76a1-a279-45db-999b-a15c2ac68c50 ==============================
+[0m13:05:53.712907 [info ] [MainThread]: Running with dbt=1.11.8
+[0m13:05:53.712907 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\om\\.dbt', 'invocation_command': 'dbt run --project-dir .\\labs\\lab-1\\retail_dw', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'labs\\lab-1\\retail_dw\\logs'}
+[0m13:05:54.980170 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:05:54.980170 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:05:54.980170 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:05:55.610276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289137B4610>]}
+[0m13:05:55.751267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289154416C0>]}
+[0m13:05:55.751267 [info ] [MainThread]: Registered adapter: snowflake=1.11.4
+[0m13:05:56.441020 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m13:05:56.441020 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:05:56.456620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289136DA4A0>]}
+[0m13:06:00.956621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028915DEC130>]}
+[0m13:06:01.200684 [debug] [MainThread]: Wrote artifact WritableManifest to labs\lab-1\retail_dw\target\manifest.json
+[0m13:06:01.200684 [debug] [MainThread]: Wrote artifact SemanticManifest to labs\lab-1\retail_dw\target\semantic_manifest.json
+[0m13:06:01.231939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028915E581C0>]}
+[0m13:06:01.231939 [info ] [MainThread]: Found 4 models, 4 sources, 523 macros
+[0m13:06:01.231939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028915E580A0>]}
+[0m13:06:01.231939 [info ] [MainThread]: 
+[0m13:06:01.231939 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:06:01.231939 [info ] [MainThread]: 
+[0m13:06:01.231939 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:06:01.267691 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TESTDB'
+[0m13:06:05.278766 [debug] [ThreadPool]: Using snowflake connection "list_TESTDB"
+[0m13:06:05.278766 [debug] [ThreadPool]: On list_TESTDB: show terse schemas in database TESTDB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "connection_name": "list_TESTDB"} */
+[0m13:06:05.278766 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:06:07.780794 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.494 seconds
+[0m13:06:07.796455 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TESTDB_PUBLIC'
+[0m13:06:07.843350 [debug] [ThreadPool]: Using snowflake connection "list_TESTDB_PUBLIC"
+[0m13:06:07.843350 [debug] [ThreadPool]: On list_TESTDB_PUBLIC: show objects in TESTDB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "connection_name": "list_TESTDB_PUBLIC"} */;
+[0m13:06:07.843350 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:06:09.054539 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.209 seconds
+[0m13:06:09.070514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028916390BB0>]}
+[0m13:06:09.071585 [debug] [Thread-2 (]: Began running node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:06:09.071585 [debug] [Thread-3 (]: Began running node model.retail_dw.stg_customers
+[0m13:06:09.071585 [info ] [Thread-2 (]: 1 of 4 START sql table model PUBLIC.mart_revenue_by_customer_2025 .............. [RUN]
+[0m13:06:09.087213 [debug] [Thread-5 (]: Began running node model.retail_dw.stg_orders
+[0m13:06:09.071585 [debug] [Thread-4 (]: Began running node model.retail_dw.stg_order_lines
+[0m13:06:09.090307 [info ] [Thread-3 (]: 2 of 4 START sql view model PUBLIC.stg_customers ............................... [RUN]
+[0m13:06:09.090307 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.retail_dw.mart_revenue_by_customer_2025'
+[0m13:06:09.095557 [info ] [Thread-5 (]: 4 of 4 START sql view model PUBLIC.stg_orders .................................. [RUN]
+[0m13:06:09.098272 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.retail_dw.stg_customers'
+[0m13:06:09.098272 [debug] [Thread-2 (]: Began compiling node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:06:09.097280 [info ] [Thread-4 (]: 3 of 4 START sql view model PUBLIC.stg_order_lines ............................. [RUN]
+[0m13:06:09.104955 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.retail_dw.stg_orders'
+[0m13:06:09.106960 [debug] [Thread-3 (]: Began compiling node model.retail_dw.stg_customers
+[0m13:06:09.114810 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.retail_dw.stg_order_lines'
+[0m13:06:09.130079 [debug] [Thread-5 (]: Began compiling node model.retail_dw.stg_orders
+[0m13:06:09.130079 [debug] [Thread-2 (]: Writing injected SQL for node "model.retail_dw.mart_revenue_by_customer_2025"
+[0m13:06:09.138872 [debug] [Thread-3 (]: Writing injected SQL for node "model.retail_dw.stg_customers"
+[0m13:06:09.138872 [debug] [Thread-4 (]: Began compiling node model.retail_dw.stg_order_lines
+[0m13:06:09.138872 [debug] [Thread-5 (]: Writing injected SQL for node "model.retail_dw.stg_orders"
+[0m13:06:09.154500 [debug] [Thread-4 (]: Writing injected SQL for node "model.retail_dw.stg_order_lines"
+[0m13:06:09.154500 [debug] [Thread-2 (]: Began executing node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:06:09.154500 [debug] [Thread-5 (]: Began executing node model.retail_dw.stg_orders
+[0m13:06:09.185746 [debug] [Thread-3 (]: Began executing node model.retail_dw.stg_customers
+[0m13:06:09.217020 [debug] [Thread-4 (]: Began executing node model.retail_dw.stg_order_lines
+[0m13:06:09.217020 [debug] [Thread-2 (]: Writing runtime sql for node "model.retail_dw.mart_revenue_by_customer_2025"
+[0m13:06:09.248250 [debug] [Thread-5 (]: Writing runtime sql for node "model.retail_dw.stg_orders"
+[0m13:06:09.263875 [debug] [Thread-3 (]: Writing runtime sql for node "model.retail_dw.stg_customers"
+[0m13:06:09.368103 [debug] [Thread-4 (]: Writing runtime sql for node "model.retail_dw.stg_order_lines"
+[0m13:06:09.368103 [debug] [Thread-2 (]: Using snowflake connection "model.retail_dw.mart_revenue_by_customer_2025"
+[0m13:06:09.368103 [debug] [Thread-4 (]: Using snowflake connection "model.retail_dw.stg_order_lines"
+[0m13:06:09.383693 [debug] [Thread-5 (]: Using snowflake connection "model.retail_dw.stg_orders"
+[0m13:06:09.368103 [debug] [Thread-2 (]: On model.retail_dw.mart_revenue_by_customer_2025: create or replace transient table TESTDB.PUBLIC.mart_revenue_by_customer_2025
+    
+    
+    
+    as ({
+    'models': [
+        {
+            'name': 'revenue_by_customer',
+            'reference_model': 'stg_customers',
+            'source_model': 'customers',
+            'source_table': 'stg_customers',
+            'target_table': 'Revenue for an order',
+            'fields': ['customer_id', 'customer_name']
+        },
+        {
+            'name': 'top_customers_by_revenue_2025',
+            'reference_model': 'stg_customers',
+            'source_model': 'customers',
+            'source_table': 'stg_customers',
+            'target_table': 'Revenue for an order by customer',
+            'fields': ['customer_id', 'customer_name', 'revenue']
+        }
+    ]
+}
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.mart_revenue_by_customer_2025"} */;
+[0m13:06:09.383693 [debug] [Thread-4 (]: On model.retail_dw.stg_order_lines: create or replace   view TESTDB.PUBLIC.stg_order_lines
+  
+  
+  
+  
+  as (
+    select
+    order_line_id,
+    order_id,
+    product_id,
+    quantity::number(18, 4) as quantity,
+    line_total::number(18, 2) as line_total
+from TESTDB.raw_store.order_lines
+  )
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.stg_order_lines"} */;
+[0m13:06:09.383693 [debug] [Thread-5 (]: On model.retail_dw.stg_orders: create or replace   view TESTDB.PUBLIC.stg_orders
+  
+  
+  
+  
+  as (
+    select
+    order_id,
+    customer_id,
+    order_date::timestamp_ntz as order_at,
+    lower(trim(status)) as order_status
+from TESTDB.raw_store.orders
+  )
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.stg_orders"} */;
+[0m13:06:09.383693 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:06:09.383693 [debug] [Thread-3 (]: Using snowflake connection "model.retail_dw.stg_customers"
+[0m13:06:09.383693 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:06:09.383693 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:06:09.383693 [debug] [Thread-3 (]: On model.retail_dw.stg_customers: create or replace   view TESTDB.PUBLIC.stg_customers
+  
+  
+  
+  
+  as (
+    select
+    customer_id,
+    trim(name) as customer_name,
+    region,
+    signup_date::date as signup_date
+from TESTDB.raw_store.customers
+  )
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.stg_customers"} */;
+[0m13:06:09.383693 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:06:10.677080 [debug] [Thread-5 (]: Snowflake adapter: Snowflake query id: 01c42908-0004-5fa3-0000-1fc9000da776
+[0m13:06:10.677080 [debug] [Thread-5 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+[0m13:06:10.708327 [debug] [Thread-5 (]: Database Error in model stg_orders (models\staging\stg_orders.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_orders.sql
+[0m13:06:10.708327 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289165AFB20>]}
+[0m13:06:10.724697 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c42908-0004-5fa3-0000-1fc9000da77a
+[0m13:06:10.724697 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+[0m13:06:10.724697 [debug] [Thread-4 (]: Database Error in model stg_order_lines (models\staging\stg_order_lines.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_order_lines.sql
+[0m13:06:10.724697 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028916390C10>]}
+[0m13:06:10.708327 [error] [Thread-5 (]: 4 of 4 ERROR creating sql view model PUBLIC.stg_orders ......................... [[31mERROR[0m in 1.60s]
+[0m13:06:10.738305 [debug] [Thread-5 (]: Finished running node model.retail_dw.stg_orders
+[0m13:06:10.738305 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.stg_orders' to be skipped because of status 'error'.  Reason: Database Error in model stg_orders (models\staging\stg_orders.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_orders.sql.
+[0m13:06:10.734709 [error] [Thread-4 (]: 3 of 4 ERROR creating sql view model PUBLIC.stg_order_lines .................... [[31mERROR[0m in 1.61s]
+[0m13:06:10.755215 [debug] [Thread-4 (]: Finished running node model.retail_dw.stg_order_lines
+[0m13:06:10.759213 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.stg_order_lines' to be skipped because of status 'error'.  Reason: Database Error in model stg_order_lines (models\staging\stg_order_lines.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_order_lines.sql.
+[0m13:06:10.873994 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c42908-0004-5fa3-0000-1fc9000da77e
+[0m13:06:10.873994 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 5 at position 8 unexpected '{'.
+[0m13:06:10.873994 [debug] [Thread-2 (]: Database Error in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 5 at position 8 unexpected '{'.
+  compiled code at target\run\retail_dw\models\marts\mart_revenue_by_customer_2025.sql
+[0m13:06:10.873994 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028916567BE0>]}
+[0m13:06:10.873994 [error] [Thread-2 (]: 1 of 4 ERROR creating sql table model PUBLIC.mart_revenue_by_customer_2025 ..... [[31mERROR[0m in 1.78s]
+[0m13:06:10.896112 [debug] [Thread-2 (]: Finished running node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:06:10.896112 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.mart_revenue_by_customer_2025' to be skipped because of status 'error'.  Reason: Database Error in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 5 at position 8 unexpected '{'.
+  compiled code at target\run\retail_dw\models\marts\mart_revenue_by_customer_2025.sql.
+[0m13:06:11.312144 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c42908-0004-5f9f-0000-1fc9000dfbfe
+[0m13:06:11.312144 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+[0m13:06:11.327750 [debug] [Thread-3 (]: Database Error in model stg_customers (models\staging\stg_customers.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_customers.sql
+[0m13:06:11.327750 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '627c76a1-a279-45db-999b-a15c2ac68c50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028916393A60>]}
+[0m13:06:11.327750 [error] [Thread-3 (]: 2 of 4 ERROR creating sql view model PUBLIC.stg_customers ...................... [[31mERROR[0m in 2.23s]
+[0m13:06:11.343349 [debug] [Thread-3 (]: Finished running node model.retail_dw.stg_customers
+[0m13:06:11.343349 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.stg_customers' to be skipped because of status 'error'.  Reason: Database Error in model stg_customers (models\staging\stg_customers.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_customers.sql.
+[0m13:06:11.343349 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:06:11.343349 [debug] [MainThread]: Connection 'list_TESTDB' was left open.
+[0m13:06:11.343349 [debug] [MainThread]: On list_TESTDB: Close
+[0m13:06:11.874882 [debug] [MainThread]: Connection 'list_TESTDB_PUBLIC' was left open.
+[0m13:06:11.874882 [debug] [MainThread]: On list_TESTDB_PUBLIC: Close
+[0m13:06:12.388864 [debug] [MainThread]: Connection 'model.retail_dw.mart_revenue_by_customer_2025' was left open.
+[0m13:06:12.388864 [debug] [MainThread]: On model.retail_dw.mart_revenue_by_customer_2025: Close
+[0m13:06:13.011522 [debug] [MainThread]: Connection 'model.retail_dw.stg_customers' was left open.
+[0m13:06:13.011522 [debug] [MainThread]: On model.retail_dw.stg_customers: Close
+[0m13:06:13.509845 [debug] [MainThread]: Connection 'model.retail_dw.stg_orders' was left open.
+[0m13:06:13.525390 [debug] [MainThread]: On model.retail_dw.stg_orders: Close
+[0m13:06:14.066824 [debug] [MainThread]: Connection 'model.retail_dw.stg_order_lines' was left open.
+[0m13:06:14.066824 [debug] [MainThread]: On model.retail_dw.stg_order_lines: Close
+[0m13:06:14.614999 [info ] [MainThread]: 
+[0m13:06:14.631289 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 13.37 seconds (13.37s).
+[0m13:06:14.632887 [debug] [MainThread]: Command end result
+[0m13:06:14.715011 [debug] [MainThread]: Wrote artifact WritableManifest to labs\lab-1\retail_dw\target\manifest.json
+[0m13:06:14.715011 [debug] [MainThread]: Wrote artifact SemanticManifest to labs\lab-1\retail_dw\target\semantic_manifest.json
+[0m13:06:14.730613 [debug] [MainThread]: Wrote artifact RunExecutionResult to labs\lab-1\retail_dw\target\run_results.json
+[0m13:06:14.730613 [info ] [MainThread]: 
+[0m13:06:14.730613 [info ] [MainThread]: [31mCompleted with 4 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:06:14.730613 [info ] [MainThread]: 
+[0m13:06:14.730613 [error] [MainThread]: [31mFailure in model stg_orders (models\staging\stg_orders.sql)[0m
+[0m13:06:14.730613 [error] [MainThread]:   Database Error in model stg_orders (models\staging\stg_orders.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_orders.sql
+[0m13:06:14.730613 [info ] [MainThread]: 
+[0m13:06:14.746236 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\staging\stg_orders.sql
+[0m13:06:14.746236 [info ] [MainThread]: 
+[0m13:06:14.749180 [error] [MainThread]: [31mFailure in model stg_order_lines (models\staging\stg_order_lines.sql)[0m
+[0m13:06:14.750179 [error] [MainThread]:   Database Error in model stg_order_lines (models\staging\stg_order_lines.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_order_lines.sql
+[0m13:06:14.751178 [info ] [MainThread]: 
+[0m13:06:14.752433 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\staging\stg_order_lines.sql
+[0m13:06:14.753446 [info ] [MainThread]: 
+[0m13:06:14.754003 [error] [MainThread]: [31mFailure in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)[0m
+[0m13:06:14.754003 [error] [MainThread]:   Database Error in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 5 at position 8 unexpected '{'.
+  compiled code at target\run\retail_dw\models\marts\mart_revenue_by_customer_2025.sql
+[0m13:06:14.754003 [info ] [MainThread]: 
+[0m13:06:14.761526 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\marts\mart_revenue_by_customer_2025.sql
+[0m13:06:14.762543 [info ] [MainThread]: 
+[0m13:06:14.766192 [error] [MainThread]: [31mFailure in model stg_customers (models\staging\stg_customers.sql)[0m
+[0m13:06:14.768192 [error] [MainThread]:   Database Error in model stg_customers (models\staging\stg_customers.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_customers.sql
+[0m13:06:14.770191 [info ] [MainThread]: 
+[0m13:06:14.771194 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\staging\stg_customers.sql
+[0m13:06:14.773195 [info ] [MainThread]: 
+[0m13:06:14.774189 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=4 SKIP=0 NO-OP=0 TOTAL=4
+[0m13:06:14.778229 [debug] [MainThread]: Command `dbt run` failed at 13:06:14.778229 after 21.20 seconds
+[0m13:06:14.778229 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000289123BF9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028915C19390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028915C19CC0>]}
+[0m13:06:14.778229 [debug] [MainThread]: Flushing usage events
+[0m13:06:16.003648 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:08:03.972728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71832FA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7197203A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7197201C0>]}
+
+
+============================== 13:08:03.988374 | dff50759-8285-491f-9e29-e956fcd612b0 ==============================
+[0m13:08:03.988374 [info ] [MainThread]: Running with dbt=1.11.8
+[0m13:08:03.988374 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\om\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt run --project-dir .\\labs\\lab-1\\retail_dw', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'labs\\lab-1\\retail_dw\\logs'}
+[0m13:08:04.685878 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:08:04.685878 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:08:04.685878 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m13:08:05.066933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7196C5CC0>]}
+[0m13:08:05.176305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71B3B0BE0>]}
+[0m13:08:05.176305 [info ] [MainThread]: Registered adapter: snowflake=1.11.4
+[0m13:08:05.926596 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m13:08:06.228165 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:08:06.243779 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m13:08:06.243779 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:08:06.309311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71BA8BE50>]}
+[0m13:08:06.495777 [debug] [MainThread]: Wrote artifact WritableManifest to labs\lab-1\retail_dw\target\manifest.json
+[0m13:08:06.537488 [debug] [MainThread]: Wrote artifact SemanticManifest to labs\lab-1\retail_dw\target\semantic_manifest.json
+[0m13:08:06.637241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71BAC9090>]}
+[0m13:08:06.637241 [info ] [MainThread]: Found 4 models, 4 sources, 523 macros
+[0m13:08:06.684122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71BACA020>]}
+[0m13:08:06.684122 [info ] [MainThread]: 
+[0m13:08:06.740002 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:08:06.757163 [info ] [MainThread]: 
+[0m13:08:06.759236 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m13:08:06.780988 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TESTDB'
+[0m13:08:07.038652 [debug] [ThreadPool]: Using snowflake connection "list_TESTDB"
+[0m13:08:07.038652 [debug] [ThreadPool]: On list_TESTDB: show terse schemas in database TESTDB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "connection_name": "list_TESTDB"} */
+[0m13:08:07.038652 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:08:08.975475 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.942 seconds
+[0m13:08:08.991035 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_TESTDB_PUBLIC'
+[0m13:08:09.053481 [debug] [ThreadPool]: Using snowflake connection "list_TESTDB_PUBLIC"
+[0m13:08:09.053481 [debug] [ThreadPool]: On list_TESTDB_PUBLIC: show objects in TESTDB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "connection_name": "list_TESTDB_PUBLIC"} */;
+[0m13:08:09.053481 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:08:10.451158 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.404 seconds
+[0m13:08:10.465201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71BA1B940>]}
+[0m13:08:10.480873 [debug] [Thread-2 (]: Began running node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:08:10.496485 [debug] [Thread-4 (]: Began running node model.retail_dw.stg_order_lines
+[0m13:08:10.496485 [debug] [Thread-5 (]: Began running node model.retail_dw.stg_orders
+[0m13:08:10.480873 [debug] [Thread-3 (]: Began running node model.retail_dw.stg_customers
+[0m13:08:10.496485 [info ] [Thread-2 (]: 1 of 4 START sql table model PUBLIC.mart_revenue_by_customer_2025 .............. [RUN]
+[0m13:08:10.496485 [info ] [Thread-4 (]: 3 of 4 START sql view model PUBLIC.stg_order_lines ............................. [RUN]
+[0m13:08:10.512102 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.retail_dw.mart_revenue_by_customer_2025'
+[0m13:08:10.496485 [info ] [Thread-5 (]: 4 of 4 START sql view model PUBLIC.stg_orders .................................. [RUN]
+[0m13:08:10.512102 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.retail_dw.stg_order_lines'
+[0m13:08:10.518693 [debug] [Thread-2 (]: Began compiling node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:08:10.496485 [info ] [Thread-3 (]: 2 of 4 START sql view model PUBLIC.stg_customers ............................... [RUN]
+[0m13:08:10.521708 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.retail_dw.stg_orders'
+[0m13:08:10.522716 [debug] [Thread-4 (]: Began compiling node model.retail_dw.stg_order_lines
+[0m13:08:10.545032 [debug] [Thread-2 (]: Writing injected SQL for node "model.retail_dw.mart_revenue_by_customer_2025"
+[0m13:08:10.545032 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.retail_dw.stg_customers'
+[0m13:08:10.553573 [debug] [Thread-5 (]: Began compiling node model.retail_dw.stg_orders
+[0m13:08:10.553809 [debug] [Thread-4 (]: Writing injected SQL for node "model.retail_dw.stg_order_lines"
+[0m13:08:10.553809 [debug] [Thread-3 (]: Began compiling node model.retail_dw.stg_customers
+[0m13:08:10.553809 [debug] [Thread-5 (]: Writing injected SQL for node "model.retail_dw.stg_orders"
+[0m13:08:10.569722 [debug] [Thread-3 (]: Writing injected SQL for node "model.retail_dw.stg_customers"
+[0m13:08:10.569722 [debug] [Thread-2 (]: Began executing node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:08:10.569722 [debug] [Thread-4 (]: Began executing node model.retail_dw.stg_order_lines
+[0m13:08:10.635563 [debug] [Thread-2 (]: Writing runtime sql for node "model.retail_dw.mart_revenue_by_customer_2025"
+[0m13:08:10.635563 [debug] [Thread-5 (]: Began executing node model.retail_dw.stg_orders
+[0m13:08:10.651190 [debug] [Thread-3 (]: Began executing node model.retail_dw.stg_customers
+[0m13:08:10.666817 [debug] [Thread-4 (]: Writing runtime sql for node "model.retail_dw.stg_order_lines"
+[0m13:08:10.682461 [debug] [Thread-5 (]: Writing runtime sql for node "model.retail_dw.stg_orders"
+[0m13:08:10.682461 [debug] [Thread-3 (]: Writing runtime sql for node "model.retail_dw.stg_customers"
+[0m13:08:10.682461 [debug] [Thread-2 (]: Using snowflake connection "model.retail_dw.mart_revenue_by_customer_2025"
+[0m13:08:10.682461 [debug] [Thread-4 (]: Using snowflake connection "model.retail_dw.stg_order_lines"
+[0m13:08:10.682461 [debug] [Thread-2 (]: On model.retail_dw.mart_revenue_by_customer_2025: create or replace transient table TESTDB.PUBLIC.mart_revenue_by_customer_2025
+    
+    
+    
+    as ({
+    'models': [
+        {
+            'name': 'revenue_by_customer',
+            'reference_model': 'stg_customers',
+            'source_model': 'customers',
+            'source_table': 'stg_customers',
+            'target_table': 'Revenue for an order',
+            'fields': ['customer_id', 'customer_name']
+        },
+        {
+            'name': 'top_customers_by_revenue_2025',
+            'reference_model': 'stg_customers',
+            'source_model': 'customers',
+            'source_table': 'stg_customers',
+            'target_table': 'Revenue for an order by customer',
+            'fields': ['customer_id', 'customer_name', 'revenue']
+        }
+    ]
+}
+    )
+
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.mart_revenue_by_customer_2025"} */;
+[0m13:08:10.682461 [debug] [Thread-5 (]: Using snowflake connection "model.retail_dw.stg_orders"
+[0m13:08:10.682461 [debug] [Thread-4 (]: On model.retail_dw.stg_order_lines: create or replace   view TESTDB.PUBLIC.stg_order_lines
+  
+  
+  
+  
+  as (
+    select
+    order_line_id,
+    order_id,
+    product_id,
+    quantity::number(18, 4) as quantity,
+    line_total::number(18, 2) as line_total
+from TESTDB.raw_store.order_lines
+  )
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.stg_order_lines"} */;
+[0m13:08:10.698060 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:08:10.698060 [debug] [Thread-3 (]: Using snowflake connection "model.retail_dw.stg_customers"
+[0m13:08:10.698060 [debug] [Thread-5 (]: On model.retail_dw.stg_orders: create or replace   view TESTDB.PUBLIC.stg_orders
+  
+  
+  
+  
+  as (
+    select
+    order_id,
+    customer_id,
+    order_date::timestamp_ntz as order_at,
+    lower(trim(status)) as order_status
+from TESTDB.raw_store.orders
+  )
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.stg_orders"} */;
+[0m13:08:10.698060 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m13:08:10.698060 [debug] [Thread-3 (]: On model.retail_dw.stg_customers: create or replace   view TESTDB.PUBLIC.stg_customers
+  
+  
+  
+  
+  as (
+    select
+    customer_id,
+    trim(name) as customer_name,
+    region,
+    signup_date::date as signup_date
+from TESTDB.raw_store.customers
+  )
+/* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "retail_dw", "target_name": "dev", "node_id": "model.retail_dw.stg_customers"} */;
+[0m13:08:10.698060 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m13:08:10.698060 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m13:08:12.008343 [debug] [Thread-5 (]: Snowflake adapter: Snowflake query id: 01c4290a-0004-5f9f-0000-1fc9000dfc16
+[0m13:08:12.008343 [debug] [Thread-5 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+[0m13:08:12.008343 [debug] [Thread-5 (]: Database Error in model stg_orders (models\staging\stg_orders.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_orders.sql
+[0m13:08:12.023968 [debug] [Thread-5 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71C01ED10>]}
+[0m13:08:12.023968 [error] [Thread-5 (]: 4 of 4 ERROR creating sql view model PUBLIC.stg_orders ......................... [[31mERROR[0m in 1.49s]
+[0m13:08:12.023968 [debug] [Thread-5 (]: Finished running node model.retail_dw.stg_orders
+[0m13:08:12.023968 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.stg_orders' to be skipped because of status 'error'.  Reason: Database Error in model stg_orders (models\staging\stg_orders.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_orders.sql.
+[0m13:08:12.050711 [debug] [Thread-4 (]: Snowflake adapter: Snowflake query id: 01c4290a-0004-5f9f-0000-1fc9000dfc1a
+[0m13:08:12.051708 [debug] [Thread-4 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+[0m13:08:12.057225 [debug] [Thread-4 (]: Database Error in model stg_order_lines (models\staging\stg_order_lines.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_order_lines.sql
+[0m13:08:12.059226 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71BFBCAC0>]}
+[0m13:08:12.060353 [error] [Thread-4 (]: 3 of 4 ERROR creating sql view model PUBLIC.stg_order_lines .................... [[31mERROR[0m in 1.55s]
+[0m13:08:12.066579 [debug] [Thread-4 (]: Finished running node model.retail_dw.stg_order_lines
+[0m13:08:12.070328 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.stg_order_lines' to be skipped because of status 'error'.  Reason: Database Error in model stg_order_lines (models\staging\stg_order_lines.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_order_lines.sql.
+[0m13:08:12.102401 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c4290a-0004-5f9f-0000-1fc9000dfc1e
+[0m13:08:12.102401 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 5 at position 8 unexpected '{'.
+[0m13:08:12.102401 [debug] [Thread-2 (]: Database Error in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 5 at position 8 unexpected '{'.
+  compiled code at target\run\retail_dw\models\marts\mart_revenue_by_customer_2025.sql
+[0m13:08:12.102401 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71B9101C0>]}
+[0m13:08:12.102401 [error] [Thread-2 (]: 1 of 4 ERROR creating sql table model PUBLIC.mart_revenue_by_customer_2025 ..... [[31mERROR[0m in 1.59s]
+[0m13:08:12.119314 [debug] [Thread-2 (]: Finished running node model.retail_dw.mart_revenue_by_customer_2025
+[0m13:08:12.119314 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.mart_revenue_by_customer_2025' to be skipped because of status 'error'.  Reason: Database Error in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 5 at position 8 unexpected '{'.
+  compiled code at target\run\retail_dw\models\marts\mart_revenue_by_customer_2025.sql.
+[0m13:08:12.185625 [debug] [Thread-3 (]: Snowflake adapter: Snowflake query id: 01c4290a-0004-5fa3-0000-1fc9000da78e
+[0m13:08:12.186755 [debug] [Thread-3 (]: Snowflake adapter: Snowflake error: 002003 (02000): SQL compilation error:
+Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+[0m13:08:12.192044 [debug] [Thread-3 (]: Database Error in model stg_customers (models\staging\stg_customers.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_customers.sql
+[0m13:08:12.193645 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dff50759-8285-491f-9e29-e956fcd612b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71C1864A0>]}
+[0m13:08:12.195324 [error] [Thread-3 (]: 2 of 4 ERROR creating sql view model PUBLIC.stg_customers ...................... [[31mERROR[0m in 1.65s]
+[0m13:08:12.196968 [debug] [Thread-3 (]: Finished running node model.retail_dw.stg_customers
+[0m13:08:12.198072 [debug] [Thread-8 (]: Marking all children of 'model.retail_dw.stg_customers' to be skipped because of status 'error'.  Reason: Database Error in model stg_customers (models\staging\stg_customers.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_customers.sql.
+[0m13:08:12.202670 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:08:12.203670 [debug] [MainThread]: Connection 'list_TESTDB' was left open.
+[0m13:08:12.205191 [debug] [MainThread]: On list_TESTDB: Close
+[0m13:08:12.696070 [debug] [MainThread]: Connection 'list_TESTDB_PUBLIC' was left open.
+[0m13:08:12.696070 [debug] [MainThread]: On list_TESTDB_PUBLIC: Close
+[0m13:08:13.218461 [debug] [MainThread]: Connection 'model.retail_dw.mart_revenue_by_customer_2025' was left open.
+[0m13:08:13.218461 [debug] [MainThread]: On model.retail_dw.mart_revenue_by_customer_2025: Close
+[0m13:08:13.817705 [debug] [MainThread]: Connection 'model.retail_dw.stg_order_lines' was left open.
+[0m13:08:13.817705 [debug] [MainThread]: On model.retail_dw.stg_order_lines: Close
+[0m13:08:14.342788 [debug] [MainThread]: Connection 'model.retail_dw.stg_orders' was left open.
+[0m13:08:14.342788 [debug] [MainThread]: On model.retail_dw.stg_orders: Close
+[0m13:08:14.850427 [debug] [MainThread]: Connection 'model.retail_dw.stg_customers' was left open.
+[0m13:08:14.850427 [debug] [MainThread]: On model.retail_dw.stg_customers: Close
+[0m13:08:15.469928 [info ] [MainThread]: 
+[0m13:08:15.469928 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 8.71 seconds (8.71s).
+[0m13:08:15.506930 [debug] [MainThread]: Command end result
+[0m13:08:15.614041 [debug] [MainThread]: Wrote artifact WritableManifest to labs\lab-1\retail_dw\target\manifest.json
+[0m13:08:15.631134 [debug] [MainThread]: Wrote artifact SemanticManifest to labs\lab-1\retail_dw\target\semantic_manifest.json
+[0m13:08:15.631134 [debug] [MainThread]: Wrote artifact RunExecutionResult to labs\lab-1\retail_dw\target\run_results.json
+[0m13:08:15.647020 [info ] [MainThread]: 
+[0m13:08:15.647621 [info ] [MainThread]: [31mCompleted with 4 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:08:15.647621 [info ] [MainThread]: 
+[0m13:08:15.647621 [error] [MainThread]: [31mFailure in model stg_orders (models\staging\stg_orders.sql)[0m
+[0m13:08:15.647621 [error] [MainThread]:   Database Error in model stg_orders (models\staging\stg_orders.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_orders.sql
+[0m13:08:15.656351 [info ] [MainThread]: 
+[0m13:08:15.657966 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\staging\stg_orders.sql
+[0m13:08:15.658965 [info ] [MainThread]: 
+[0m13:08:15.659978 [error] [MainThread]: [31mFailure in model stg_order_lines (models\staging\stg_order_lines.sql)[0m
+[0m13:08:15.661001 [error] [MainThread]:   Database Error in model stg_order_lines (models\staging\stg_order_lines.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_order_lines.sql
+[0m13:08:15.664171 [info ] [MainThread]: 
+[0m13:08:15.665153 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\staging\stg_order_lines.sql
+[0m13:08:15.667151 [info ] [MainThread]: 
+[0m13:08:15.668153 [error] [MainThread]: [31mFailure in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)[0m
+[0m13:08:15.669150 [error] [MainThread]:   Database Error in model mart_revenue_by_customer_2025 (models\marts\mart_revenue_by_customer_2025.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 5 at position 8 unexpected '{'.
+  compiled code at target\run\retail_dw\models\marts\mart_revenue_by_customer_2025.sql
+[0m13:08:15.671148 [info ] [MainThread]: 
+[0m13:08:15.672175 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\marts\mart_revenue_by_customer_2025.sql
+[0m13:08:15.673155 [info ] [MainThread]: 
+[0m13:08:15.675149 [error] [MainThread]: [31mFailure in model stg_customers (models\staging\stg_customers.sql)[0m
+[0m13:08:15.675854 [error] [MainThread]:   Database Error in model stg_customers (models\staging\stg_customers.sql)
+  002003 (02000): SQL compilation error:
+  Schema 'TESTDB.RAW_STORE' does not exist or not authorized.
+  compiled code at target\run\retail_dw\models\staging\stg_customers.sql
+[0m13:08:15.675854 [info ] [MainThread]: 
+[0m13:08:15.675854 [info ] [MainThread]:   compiled code at target\compiled\retail_dw\models\staging\stg_customers.sql
+[0m13:08:15.675854 [info ] [MainThread]: 
+[0m13:08:15.675854 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=4 SKIP=0 NO-OP=0 TOTAL=4
+[0m13:08:15.675854 [debug] [MainThread]: Command `dbt run` failed at 13:08:15.675854 after 11.85 seconds
+[0m13:08:15.691479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71832FA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71B3B0BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A71BA7DE40>]}
+[0m13:08:15.691479 [debug] [MainThread]: Flushing usage events
+[0m13:08:16.996633 [debug] [MainThread]: An error was encountered while trying to flush usage events

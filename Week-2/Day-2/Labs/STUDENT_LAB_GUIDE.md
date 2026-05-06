@@ -27,7 +27,48 @@ This guide walks you through **creating every file and folder** for Lab 1, Lab 2
    ollama pull llama3
    ```
 
-4. Optional for Lab 3: **dbt** + adapter for your warehouse (e.g. `dbt-snowflake`), and a **`profiles.yml`** entry named **`retail_dw`** pointing at a database where raw tables will live.
+4. If **`llama3`** fails with memory errors, use a smaller model:
+
+   ```bash
+   ollama pull llama3.2:3b
+   ```
+
+   Then set the environment variable before running a lab:
+
+   ```powershell
+   $env:OLLAMA_MODEL="llama3.2:3b"
+   ```
+
+5. Optional for Lab 1/Lab 3: **dbt** + adapter for your warehouse (e.g. `dbt-snowflake`). On Windows, dbt also needs a profiles directory:
+
+   - Create `C:\Users\<you>\.dbt\`
+   - Create `C:\Users\<you>\.dbt\profiles.yml`
+
+   Example commands:
+
+   ```powershell
+   pip install dbt-snowflake
+   mkdir $env:USERPROFILE\.dbt
+   ```
+
+   Minimal starter `profiles.yml` (fill in real values):
+
+   ```yaml
+   retail_dw:
+     target: dev
+     outputs:
+       dev:
+         type: snowflake
+         account: "REPLACE_ME"
+         user: "REPLACE_ME"
+         password: "REPLACE_ME"
+         role: "REPLACE_ME"
+         database: "REPLACE_ME"
+         warehouse: "REPLACE_ME"
+         schema: "REPLACE_ME"
+         threads: 4
+         client_session_keep_alive: false
+   ```
 
 ---
 
@@ -136,11 +177,11 @@ def ask_llm(prompt: str, model: str | None = None) -> str:
 
 ---
 
-## Lab 1 — NL2SQL (`lab-1/`)
+## Lab 1 — NL→dbt model SQL (`lab-1/`)
 
 ### Goal
 
-Turn natural-language questions into **Snowflake-style `SELECT`** statements using **schema context** and **few-shot** SQL examples.
+Turn natural-language questions into **dbt model SQL** (Snowflake-style) using **`ref()`**, schema context, and few-shot examples. The lab will also **save the generated SQL into a dbt project** so you can run `dbt compile/run` later.
 
 ### Step 1.1 — Create folder
 
@@ -150,35 +191,55 @@ Create: `labs/lab-1/`
 
 Copy the shared **`llm.py`** from Part 0 into `lab-1/llm.py`.
 
-### Step 1.3 — Create `nl2sql.py`
+### Step 1.3 — Create a minimal dbt project (inside Lab 1)
+
+Create this folder tree under `lab-1/`:
+
+```text
+lab-1/
+  retail_dw/
+    dbt_project.yml
+    models/
+      sources.yml
+      staging/
+        stg_customers.sql
+        stg_orders.sql
+        stg_order_lines.sql
+      marts/
+        (generated files will be saved here)
+```
+
+Then create the files using the same content style as Lab 3 (sources + staging models). You can copy/paste from the Lab 3 section of this guide.
+
+### Step 1.4 — Create `nl2sql.py` (dbt-flavored)
 
 1. Create `lab-1/nl2sql.py`.
 2. Implement these pieces **in order** inside the file:
    - **Docstring** at top: one paragraph on NL2SQL **edge cases** (ambiguous columns, time zones, NULL aggregates, join fan-out, dialect drift).
    - **Imports:** `import re` and `from llm import ask_llm`.
-   - **`SCHEMA_CONTEXT`** (multi-line string): tables `customers`, `products`, `orders`, `order_lines` with PK/FK notes and **grain** (one row per line item; revenue = sum of `line_total`).
-   - **`FEW_SHOT`** (multi-line string): **two** question/SQL pairs, for example:
-     - Total revenue last month (join `order_lines` to `orders`, filter on `order_date`).
-     - Top 5 customers by revenue in a calendar year (join all needed tables, `GROUP BY`, `ORDER BY`, `LIMIT`).
-   - **`SYSTEM_PROMPT`**: an f-string that concatenates role (“expert analytics engineer”), dialect (**Snowflake**), `SCHEMA_CONTEXT`, `FEW_SHOT`, and **rules** (single SELECT only, optional ```sql fence, explicit JOINs, read-only).
+   - **`SCHEMA_CONTEXT`**: include **sources** and **staging models** available, and instruct the model to use `{{ ref('stg_*') }}` when possible.
+   - **`FEW_SHOT`**: two Q→SQL examples written as **dbt model SQL** using `ref()` (CTEs + `select`).
+   - **`SYSTEM_PROMPT`**: require ONE dbt model query only (Snowflake-compatible), **SQL only**, prefer `ref()` and read-only.
    - **`sql_from_llm_output(text)`**: strip optional Markdown ```sql … ``` fences with `re.search(..., re.DOTALL | re.IGNORECASE)`.
    - **`natural_language_to_sql(question)`**: append user question to the system prompt, call `ask_llm`, return cleaned SQL via `sql_from_llm_output`.
 
 You can compare your result with the reference implementation already in this repo: `lab-1/nl2sql.py`.
 
-### Step 1.4 — Create `main.py`
+### Step 1.5 — Create `main.py`
 
 1. Create `lab-1/main.py`.
 2. Loop forever:
    - Read a **Question:** line from the user.
+   - Ask for a **dbt model name** (file name).
    - On **Ctrl+C** or EOF, exit cleanly.
    - Skip empty input.
    - Call `natural_language_to_sql`; catch **`RuntimeError`** from networking/Ollama and print the message.
+   - Save output into: `lab-1/retail_dw/models/marts/<model_name>.sql`
    - Print the generated SQL.
 
 Reference behavior matches `lab-1/main.py` in this repo.
 
-### Step 1.5 — Run Lab 1
+### Step 1.6 — Run Lab 1
 
 From `labs/`:
 
@@ -187,6 +248,20 @@ python lab-1/main.py
 ```
 
 Try: “Total revenue by customer”, “Orders per region last quarter”, etc.
+
+### Step 1.7 — Test the dbt output (compile vs run)
+
+- **Compile test (no database required)**: this checks that dbt can parse and render your Jinja (`ref()`, `source()`).
+
+  ```powershell
+  dbt compile --project-dir ".\labs\lab-1\retail_dw"
+  ```
+
+- **Run test (database required)**: `dbt run` will fail unless you have the **source schema and tables** available.
+  By default this project expects your raw sources to exist (example): `TESTDB.RAW_STORE.customers`, `orders`, `order_lines`, `products`.
+
+  If you see:
+  - `Schema 'TESTDB.RAW_STORE' does not exist or not authorized` → create the schema/tables or update `models/sources.yml` to match your real raw schema.
 
 **Student checklist:**
 
@@ -584,6 +659,9 @@ python lab-1/main.py
 | “Cannot reach Ollama” | Ollama app running; `ollama list` works; model pulled. |
 | Hang then Ctrl+C | Previously often **`localhost`** vs IPv6; code uses **`127.0.0.1`** by default. |
 | `bind: ... 11434 ... permitted` when running `ollama serve` | Ollama already listening; **do not** start a second server. |
+| `Ollama HTTP 500 ... unable to allocate CPU buffer` | Model too large for RAM → pull a smaller model (e.g. `llama3.2:3b` or `llama3.2:1b`) and set `$env:OLLAMA_MODEL`. |
+| `Ollama HTTP 404: model '...' not found` | You set `OLLAMA_MODEL` to a tag you haven’t pulled yet → run `ollama pull <tag>` then retry. |
+| `dbt ... Invalid value for '--profiles-dir': Path 'C:\\Users\\...\\.dbt' does not exist` | Create `C:\\Users\\<you>\\.dbt\\` and add `profiles.yml`. |
 | dbt errors about sources | Raw tables not created or `profiles.yml` schema/database mismatch. |
 | Lab 2 JSON parse errors | Model returned prose; retry or tighten prompt; code keeps `raw` for debugging. |
 
