@@ -1,0 +1,82 @@
+Week 1
+
+what LLMs are
+how prompting works
+RAG
+MCP
+tool calling
+embeddings
+vector databases
+
+
+How AI works
++
+How AI connects with data systems
+
+Week 2
+
+AI-assisted SQL
+dbt generation
+ETL scaffolding
+AI coding assistants
+CI/CD generation
+testing automation
+documentation automation
+rapid prototyping
+
+
+Requirement
+   ↓
+AI-assisted implementation
+   ↓
+Testing
+   ↓
+CI/CD
+   ↓
+Deployment
+
+
+Week 3
+
+AI systems perform engineering workflows autonomously
+
+
+
+
+
+FINAL==>
+
+
+
+                ┌────────────────────┐
+                │ Business Request   │
+                └─────────┬──────────┘
+                          ↓
+                ┌────────────────────┐
+                │ LLM / Agent Layer  │
+                └─────────┬──────────┘
+                          ↓
+         ┌────────────────────────────────┐
+         │ Multi-Agent Orchestration      │
+         │ LangGraph / CrewAI / AutoGen   │
+         └────────────────┬───────────────┘
+                          ↓
+        ┌─────────────────────────────────┐
+        │ Enterprise Context Layer        │
+        │ RAG + Metadata + Vector DB      │
+        └────────────────┬────────────────┘
+                         ↓
+       ┌──────────────────────────────────┐
+       │ Tool Layer / MCP / APIs          │
+       │ Snowflake / dbt / Spark / APIs   │
+       └────────────────┬─────────────────┘
+                        ↓
+      ┌───────────────────────────────────┐
+      │ Data Platform Execution Layer     │
+      │ ETL / Validation / Governance     │
+      └────────────────┬──────────────────┘
+                       ↓
+     ┌────────────────────────────────────┐
+     │ Observability + Self-Healing       │
+     │ Alerts / RCA / Auto-remediation    │
+     └────────────────────────────────────┘
