@@ -1,0 +1,7 @@
+product_id,name,category,price,brand,discount
+1,Laptop,Electronics,800,Unknown,0.0
+2,Shoes,Fashion,100,Unknown,0.0
+3,Phone,Electronics,500,Unknown,0.0
+4,Tablet,Electronics,300,Samsung,0.0
+5,Watch,Fashion,150,Fossil,0.0
+6,TV,Electronics,1000,Sony,10.0

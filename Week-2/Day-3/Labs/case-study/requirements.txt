@@ -1,0 +1,4 @@
+pyspark>=3.4.0
+prefect>=2.14.0
+pytest>=7.0.0
+PyYAML>=6.0
