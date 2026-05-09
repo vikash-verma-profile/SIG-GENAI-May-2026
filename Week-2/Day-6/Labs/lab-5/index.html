@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supply Chain KPI Dashboard — Lab 5 starter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <header class="border-b border-slate-800 px-6 py-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-xl font-semibold">Retail supply chain monitor</h1>
+        <p class="text-sm text-slate-400">Starter layout — replace with v0.dev generated React.</p>
+      </div>
+      <span class="text-xs px-2 py-1 rounded bg-emerald-900 text-emerald-200">Lab 5</span>
+    </header>
+
+    <main class="p-6 grid gap-6 lg:grid-cols-4">
+      <section class="lg:col-span-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p class="text-slate-400 text-sm">On-time shipment</p>
+          <p class="text-3xl font-semibold mt-2">94.2%</p>
+          <p class="text-emerald-400 text-xs mt-2">+1.1% vs last week</p>
+        </article>
+        <article class="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p class="text-slate-400 text-sm">Stock-outs</p>
+          <p class="text-3xl font-semibold mt-2">12</p>
+          <p class="text-rose-400 text-xs mt-2">3 critical SKUs</p>
+        </article>
+        <article class="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p class="text-slate-400 text-sm">Pipeline failures (24h)</p>
+          <p class="text-3xl font-semibold mt-2">2</p>
+          <p class="text-amber-400 text-xs mt-2">Needs attention</p>
+        </article>
+        <article class="rounded-xl border border-slate-800 bg-slate-900 p-4">
+          <p class="text-slate-400 text-sm">Avg. dwell time</p>
+          <p class="text-3xl font-semibold mt-2">18h</p>
+          <p class="text-slate-500 text-xs mt-2">Target &lt; 24h</p>
+        </article>
+      </section>
+
+      <section class="lg:col-span-3 rounded-xl border border-slate-800 bg-slate-900 p-4">
+        <h2 class="font-medium mb-4">Pipeline throughput (sample)</h2>
+        <div class="h-48 flex items-end gap-2">
+          <div class="flex-1 bg-indigo-600 rounded-t" style="height: 40%"></div>
+          <div class="flex-1 bg-indigo-600 rounded-t" style="height: 65%"></div>
+          <div class="flex-1 bg-indigo-600 rounded-t" style="height: 55%"></div>
+          <div class="flex-1 bg-indigo-600 rounded-t" style="height: 80%"></div>
+          <div class="flex-1 bg-indigo-600 rounded-t" style="height: 48%"></div>
+          <div class="flex-1 bg-rose-500 rounded-t" style="height: 30%"></div>
+          <div class="flex-1 bg-indigo-600 rounded-t" style="height: 72%"></div>
+        </div>
+      </section>
+
+      <aside class="rounded-xl border border-slate-800 bg-slate-900 p-4">
+        <h2 class="font-medium mb-3">Alerts</h2>
+        <ul class="space-y-3 text-sm">
+          <li class="border-l-2 border-rose-500 pl-3">Warehouse B — delayed inbound</li>
+          <li class="border-l-2 border-amber-500 pl-3">EDI job retry scheduled</li>
+        </ul>
+      </aside>
+    </main>
+  </body>
+</html>

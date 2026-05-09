@@ -1,0 +1,26 @@
+[
+  {
+    "pipeline": "cdr_ingest",
+    "region": "APAC",
+    "status": "Success",
+    "last_run": "2026-05-07 10:00",
+    "alert_count": 0,
+    "duration_sec": 120
+  },
+  {
+    "pipeline": "billing_sync",
+    "region": "EMEA",
+    "status": "Failed",
+    "last_run": "2026-05-07 09:58",
+    "alert_count": 3,
+    "duration_sec": 45
+  },
+  {
+    "pipeline": "network_metrics",
+    "region": "Americas",
+    "status": "Success",
+    "last_run": "2026-05-07 09:55",
+    "alert_count": 1,
+    "duration_sec": 200
+  }
+]

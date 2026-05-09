@@ -1,0 +1,2 @@
+ERROR Kafka consumer lag exceeded threshold
+ERROR Connection timeout at broker-2

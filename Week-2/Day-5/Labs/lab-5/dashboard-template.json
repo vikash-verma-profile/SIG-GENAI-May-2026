@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "title": "Logistics - Failed Deliveries & API Latency (template)",
+    "tags": ["logistics", "ai-assist"],
+    "panels": [
+      {
+        "title": "Failed deliveries (rate)",
+        "type": "timeseries",
+        "datasource": "Prometheus"
+      },
+      {
+        "title": "API latency (p95)",
+        "type": "timeseries",
+        "datasource": "Prometheus"
+      },
+      {
+        "title": "Route processing failures",
+        "type": "timeseries",
+        "datasource": "Prometheus"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+Airline booking pipeline incident — 2026-05-07
+
+The nightly batch sync from the reservation mainframe failed after a schema change
+to the segment table (extra column seat_upgrade_code). The Spark job aborted during
+the bronze-to-silver transform because the expected CSV layout no longer matched.
+
+Downstream: Silver and gold reservation tables were not refreshed; booking APIs served
+stale availability for 45 minutes until operators reran the job with an updated schema.
+
+Root cause: undeployed schema registry update for segment feeds combined with silent
+failure in the DLQ consumer masked the first alerts.

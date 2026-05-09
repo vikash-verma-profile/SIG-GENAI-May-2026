@@ -1,0 +1,23 @@
+[
+  {
+    "pipeline": "patient_facts_etl",
+    "status": "Success",
+    "last_run": "2026-05-07 06:30",
+    "records_processed": 125000,
+    "department": "Inpatient"
+  },
+  {
+    "pipeline": "claims_etl",
+    "status": "Failed",
+    "last_run": "2026-05-07 06:45",
+    "records_processed": 0,
+    "department": "Finance"
+  },
+  {
+    "pipeline": "lab_results_etl",
+    "status": "Success",
+    "last_run": "2026-05-07 07:00",
+    "records_processed": 54000,
+    "department": "Laboratory"
+  }
+]

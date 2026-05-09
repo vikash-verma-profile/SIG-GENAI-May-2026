@@ -1,0 +1,5 @@
+{
+  "pipeline_name": "sales_pipeline",
+  "sla": "15 minutes",
+  "success_rate": "99%"
+}

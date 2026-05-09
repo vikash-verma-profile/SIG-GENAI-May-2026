@@ -1,0 +1,14 @@
+Incident summary (telecom monitoring sample)
+
+Logs analyzed: app.log
+
+Root cause (RCA)
+1. Broker timeout — Connection to broker-2 timed out; broker overload or network partition.
+2. Consumer lag — Lag exceeded threshold; consistent with unhealthy brokers or stalled consumers.
+
+Severity: High — Production messaging degraded; SLA risk for event processing.
+
+Recommended remediation
+1. Restart or replace unhealthy broker processes on broker-2 after quorum check.
+2. Scale Kafka consumers or partitions for topics showing lag.
+3. Verify network paths; tune timeouts only after ruling out broker resource exhaustion.

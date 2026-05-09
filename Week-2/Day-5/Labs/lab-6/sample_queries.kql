@@ -1,0 +1,7 @@
+// Azure Monitor / Application Insights style query (insurance claims platform).
+// Run in Log Analytics or Application Insights Logs.
+
+AppTraces
+| where SeverityLevel >= 3
+| project TimeGenerated, Message, SeverityLevel, OperationId
+| order by TimeGenerated desc

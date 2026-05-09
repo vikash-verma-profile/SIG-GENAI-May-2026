@@ -1,0 +1,6 @@
+KPI dashboard design derived from metadata.json (Lab 8 — paste into Grafana/Power BI / AI tool).
+
+Suggested tiles:
+1. SLA compliance — gauge: last successful run vs 15 minute SLA; burn-down or error budget.
+2. Failure trends — time series: failed runs per hour/day from pipeline orchestrator.
+3. Data freshness — age of latest record in curated zone vs source watermark.

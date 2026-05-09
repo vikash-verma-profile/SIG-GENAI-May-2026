@@ -1,0 +1,8 @@
+Sample production-issue summary (paste Azure Monitor query results into your LLM prompt).
+
+Expected themes to surface:
+- Failed API calls to claims submission endpoints
+- Database latency on policy or claims tables
+- Overall service degradation correlating with error spikes
+
+Use the KQL in sample_queries.kql with your workspace connection from Azure Portal > Log Analytics.
