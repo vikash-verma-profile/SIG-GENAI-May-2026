@@ -1,0 +1,18 @@
+[
+  {
+    "expectation_type": "ExpectColumnValuesToNotBeNull",
+    "success": true
+  },
+  {
+    "expectation_type": "ExpectColumnValuesToBeUnique",
+    "success": true
+  },
+  {
+    "expectation_type": "ExpectColumnValuesToBeBetween",
+    "success": true
+  },
+  {
+    "expectation_type": "ExpectColumnValuesToBeBetween",
+    "success": true
+  }
+]

@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+langgraph
+snowflake-connector-python
+chromadb

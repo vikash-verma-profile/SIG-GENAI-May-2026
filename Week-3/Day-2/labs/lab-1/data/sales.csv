@@ -1,0 +1,4 @@
+customer_id,revenue,email
+1001,5000,test@gmail.com
+1002,,invalid_email
+1003,7000,user@yahoo.com

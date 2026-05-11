@@ -1,0 +1,7 @@
+• Agent anatomy: reasoning, planning, memory, tool-use, action
+• ReAct, CoT, Reflection, Self-Critique patterns
+• Short-term (in-context) vs long-term (DB-backed) agent memory
+• Multi-agent architectures: supervisor, swarm, sequential pipeline
+• LangGraph: stateful directed graphs for complex DE agents
+• CrewAI: role-based multi-agent teams for DE automation
+• AutoGen and Semantic Kernel enterprise patterns
