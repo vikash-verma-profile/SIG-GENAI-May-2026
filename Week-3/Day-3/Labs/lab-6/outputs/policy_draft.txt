@@ -1,0 +1,7 @@
+Policy draft (offline template):
+- All datasets containing PII must use encryption at rest and in transit.
+- Access is limited to authorized roles on a least-privilege basis.
+- Context supplied by data owner:
+Dataset contains PII.
+Encryption required.
+Access limited to finance and security roles.

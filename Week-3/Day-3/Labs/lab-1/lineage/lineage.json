@@ -1,0 +1,12 @@
+{
+  "edges": [
+    {
+      "from": "customers",
+      "to": "output_table"
+    },
+    {
+      "from": "orders",
+      "to": "output_table"
+    }
+  ]
+}

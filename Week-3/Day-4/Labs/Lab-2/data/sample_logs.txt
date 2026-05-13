@@ -1,0 +1,6 @@
+INFO Job started
+INFO Loading source batch 42
+ERROR Schema mismatch in customer_orders
+INFO Retry initiated
+ERROR Timeout while writing to warehouse
+INFO Job completed with warnings

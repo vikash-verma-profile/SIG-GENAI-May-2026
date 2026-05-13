@@ -1,0 +1,38 @@
+{
+  "question": "Generate SQL for monthly revenue trend.",
+  "sql": "SELECT month, region, SUM(revenue) AS total_revenue FROM revenue GROUP BY month, region ORDER BY month, region",
+  "rows": [
+    {
+      "month": "2026-01",
+      "region": "North",
+      "total_revenue": 120000
+    },
+    {
+      "month": "2026-01",
+      "region": "South",
+      "total_revenue": 98000
+    },
+    {
+      "month": "2026-02",
+      "region": "North",
+      "total_revenue": 132000
+    },
+    {
+      "month": "2026-02",
+      "region": "South",
+      "total_revenue": 101000
+    },
+    {
+      "month": "2026-03",
+      "region": "North",
+      "total_revenue": 141000
+    },
+    {
+      "month": "2026-03",
+      "region": "South",
+      "total_revenue": 109000
+    }
+  ],
+  "summary": "Revenue increased steadily; highest total revenue is in North at 141000.",
+  "snowflake": "Snowflake not configured; local SQLite demo used."
+}

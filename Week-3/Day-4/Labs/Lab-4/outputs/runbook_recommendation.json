@@ -1,0 +1,9 @@
+{
+  "issue": "Schema Drift",
+  "steps": "Update transformation mapping and rerun affected models.",
+  "similarity_match": {
+    "issue": "Schema Drift",
+    "score": 0.0
+  },
+  "summary": "Issue: Schema Drift\nRecommended fix: Update transformation mapping and rerun affected models.\nStatus: ready to apply"
+}

@@ -1,0 +1,12 @@
+{
+  "baseline_mean": 100.0,
+  "current_mean": 140.9,
+  "drift_detected": true,
+  "ks_stat": 1.0,
+  "ks_pvalue": 0.0,
+  "psi": 7.5971,
+  "adjustment": {
+    "threshold": 150.0,
+    "action": "increase_validation_threshold"
+  }
+}

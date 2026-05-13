@@ -1,0 +1,3 @@
+2026-05-13T08:00:01Z INFO orders_ingest started
+2026-05-13T08:00:04Z ERROR schema mismatch on customer_orders.customer_id
+2026-05-13T08:00:05Z INFO pipeline marked FAILED

@@ -1,0 +1,22 @@
+{
+  "column_signals": {
+    "email": [
+      "email_pattern"
+    ],
+    "phone": [
+      "phone_10digit"
+    ]
+  },
+  "row_level_preview": [
+    {
+      "email": "user@gmail.com",
+      "phone": "9876543210",
+      "classification": "Confidential"
+    },
+    {
+      "email": "invalid",
+      "phone": "123",
+      "classification": "Internal"
+    }
+  ]
+}

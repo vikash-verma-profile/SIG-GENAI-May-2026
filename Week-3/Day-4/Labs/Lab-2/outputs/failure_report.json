@@ -1,0 +1,47 @@
+{
+  "failures": [
+    {
+      "message": "ERROR Schema mismatch in customer_orders",
+      "severity": "high"
+    },
+    {
+      "message": "ERROR Timeout while writing to warehouse",
+      "severity": "high"
+    }
+  ],
+  "severity": [
+    {
+      "message": "INFO Job started",
+      "score": 1
+    },
+    {
+      "message": "INFO Loading source batch 42",
+      "score": 1
+    },
+    {
+      "message": "ERROR Schema mismatch in customer_orders",
+      "score": 6
+    },
+    {
+      "message": "INFO Retry initiated",
+      "score": 1
+    },
+    {
+      "message": "ERROR Timeout while writing to warehouse",
+      "score": 6
+    },
+    {
+      "message": "INFO Job completed with warnings",
+      "score": 1
+    }
+  ],
+  "clusters": [
+    1,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "summary": "Root cause: schema mismatch between source and target tables."
+}

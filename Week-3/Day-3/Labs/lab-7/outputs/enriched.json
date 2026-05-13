@@ -1,0 +1,6 @@
+{
+  "table": "sales_transactions",
+  "description": "Contains customer sales transaction history (template).",
+  "owner": "finance_team",
+  "sla_recommendation": "Daily refresh"
+}

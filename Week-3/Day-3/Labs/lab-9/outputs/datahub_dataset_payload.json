@@ -1,0 +1,19 @@
+{
+  "entityType": "dataset",
+  "entityUrn": "urn:li:dataset:(urn:li:dataPlatform:snowflake,sales,mart)",
+  "aspects": {
+    "globalTags": {
+      "tags": [
+        {
+          "tag": "finance"
+        },
+        {
+          "tag": "lab-generated"
+        }
+      ]
+    },
+    "editableDatasetProperties": {
+      "description": "AI-enriched sales mart dataset (lab demo)."
+    }
+  }
+}

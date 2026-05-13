@@ -1,0 +1,4 @@
+{
+  "table": "customer_transactions",
+  "columns": ["customer_id", "amount", "txn_timestamp"]
+}

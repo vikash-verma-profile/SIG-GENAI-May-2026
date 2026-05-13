@@ -1,0 +1,8 @@
+{
+  "query": "Revenue trend",
+  "context": [
+    "Revenue increased by 20% in Q1 across enterprise accounts.",
+    "Churn increased by 3% in the North region during April."
+  ],
+  "answer": "Revenue increased by 20% in Q1 across enterprise accounts. Churn increased by 3% in the North region during April."
+}

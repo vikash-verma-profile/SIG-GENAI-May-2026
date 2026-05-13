@@ -1,0 +1,13 @@
+{
+  "accuracy": 1.0,
+  "threshold": 0.8,
+  "needs_retrain": false,
+  "action": {
+    "status": "monitoring_only"
+  },
+  "history": [
+    {
+      "accuracy": 1.0
+    }
+  ]
+}

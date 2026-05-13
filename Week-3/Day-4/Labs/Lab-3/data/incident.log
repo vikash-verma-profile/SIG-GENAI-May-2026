@@ -1,0 +1,3 @@
+2026-05-13T09:12:01Z ERROR schema drift detected in customer_orders
+2026-05-13T09:12:02Z WARN null spike in revenue_amount
+2026-05-13T09:12:03Z ERROR warehouse write timeout after 120s

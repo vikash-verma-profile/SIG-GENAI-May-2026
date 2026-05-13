@@ -1,0 +1,11 @@
+{
+  "metrics": {
+    "revenue_drop_pct": 10,
+    "churn_increase_pct": 15,
+    "north_region_share_pct": 42,
+    "support_tickets_change_pct": -8
+  },
+  "prompt": "Generate executive business summary using these metrics: {\"revenue_drop_pct\": 10, \"churn_increase_pct\": 15, \"north_region_share_pct\": 42, \"support_tickets_change_pct\": -8}",
+  "narrative": "Revenue declined primarily due to increased churn in the North region. Revenue dropped 10% while churn rose 15%. Support tickets improved by 8%, indicating better onboarding.",
+  "sentiment": "negative"
+}

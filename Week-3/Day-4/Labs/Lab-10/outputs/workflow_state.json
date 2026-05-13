@@ -1,0 +1,6 @@
+{
+  "issue": "Schema Drift",
+  "fix": "Update schema mapping",
+  "status": "success",
+  "retries": 0
+}

@@ -1,0 +1,3 @@
+term,definition
+customer_revenue,Customer Revenue: Business-facing dataset derived from the listed columns; used for reporting and analytics.
+orders,Orders: Business-facing dataset derived from the listed columns; used for reporting and analytics.

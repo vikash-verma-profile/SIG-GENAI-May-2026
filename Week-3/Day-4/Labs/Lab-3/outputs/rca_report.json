@@ -1,0 +1,28 @@
+{
+  "failure_types": [
+    "Schema Drift",
+    "Null Spike",
+    "Timeout",
+    "Unknown"
+  ],
+  "incidents": [
+    {
+      "log": "2026-05-13T09:12:01Z ERROR schema drift detected in customer_orders",
+      "issue": "Schema Drift",
+      "confidence": 0.85,
+      "summary": "Failure caused by schema drift in customer_orders table."
+    },
+    {
+      "log": "2026-05-13T09:12:02Z WARN null spike in revenue_amount",
+      "issue": "Null Spike",
+      "confidence": 0.65,
+      "summary": "Failure caused by a sudden null spike in revenue_amount."
+    },
+    {
+      "log": "2026-05-13T09:12:03Z ERROR warehouse write timeout after 120s",
+      "issue": "Timeout",
+      "confidence": 0.65,
+      "summary": "Failure caused by a warehouse write timeout."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "revenue_drop_pct": 10,
+  "churn_increase_pct": 15,
+  "north_region_share_pct": 42,
+  "support_tickets_change_pct": -8
+}

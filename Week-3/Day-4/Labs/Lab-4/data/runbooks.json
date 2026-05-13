@@ -1,0 +1,6 @@
+{
+  "Schema Drift": "Update transformation mapping and rerun affected models.",
+  "Null Spike": "Backfill nulls, add validation, and rerun quality checks.",
+  "Timeout": "Increase warehouse timeout, scale warehouse, and retry the job.",
+  "Unknown Error": "Escalate to on-call and attach recent logs."
+}

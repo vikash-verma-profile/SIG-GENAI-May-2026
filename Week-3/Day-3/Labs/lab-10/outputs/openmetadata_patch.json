@@ -1,0 +1,11 @@
+{
+  "description": "Sales dataset containing transaction details (AI-enriched lab text).",
+  "tags": [
+    {
+      "tagFQN": "Finance"
+    },
+    {
+      "tagFQN": "lab-demo"
+    }
+  ]
+}

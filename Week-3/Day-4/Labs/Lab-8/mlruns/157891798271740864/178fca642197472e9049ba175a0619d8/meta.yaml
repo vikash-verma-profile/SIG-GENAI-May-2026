@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/om/Desktop/AI-GenAI/Week-3/Day-4/Labs/Lab-8/mlruns/157891798271740864/178fca642197472e9049ba175a0619d8/artifacts
+end_time: 1778649141235
+entry_point_name: ''
+experiment_id: '157891798271740864'
+lifecycle_stage: active
+run_id: 178fca642197472e9049ba175a0619d8
+run_name: iris_classifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1778649141131
+status: 3
+tags: []
+user_id: om

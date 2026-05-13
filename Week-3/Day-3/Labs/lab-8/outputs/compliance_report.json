@@ -1,0 +1,10 @@
+{
+  "pii_detected": true,
+  "retention_policy_days": 365,
+  "max_record_age_days": 400,
+  "retention_ok": false,
+  "alerts": [
+    "PII columns detected \u2014 verify lawful basis and minimization.",
+    "Retention risk: oldest records exceed policy (400 > 365)."
+  ]
+}
